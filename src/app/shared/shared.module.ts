@@ -6,6 +6,7 @@ import { TotalPipe } from './pipes/total.pipe';
 
 @NgModule({
   declarations: [TotalPipe],
+  exports:[TotalPipe],
   imports: [
     CommonModule
   ]
