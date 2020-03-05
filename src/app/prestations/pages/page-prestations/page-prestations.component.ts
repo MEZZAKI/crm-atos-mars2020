@@ -12,7 +12,7 @@ import { State } from 'src/app/shared/enums/state.enum';
 export class PagePrestationsComponent implements OnInit {
 public collection$ :Observable<Prestation[]>;
 public states = Object.values(State);
-public properties: String[];
+public propertiesPresta: String[];
   constructor(private ps:PrestationsService) { }
   public changeState(item:Prestation,event){
 
@@ -29,7 +29,7 @@ public properties: String[];
   //      }
   //  );
   this.collection$=this.ps.collection;
-  this.properties = [
+  this.propertiesPresta = [
     'Type',
     'Client',
     'NbJours',
