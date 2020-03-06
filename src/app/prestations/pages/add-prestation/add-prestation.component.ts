@@ -11,7 +11,16 @@ export class AddPrestationComponent implements OnInit {
 
   constructor(private ps:PrestationsService,private router:Router,private acRoute :ActivatedRoute) { }
 
+
+  public  title :any;
+  public  subTitle :any;
   ngOnInit(): void {
+       this.acRoute.data.subscribe(
+         (datas)=>{
+           this.title=datas.title;
+           this.subTitle=datas.subTitle;
+       }
+     );
   }
   public addItem(item:any){
     console.log("recieved");

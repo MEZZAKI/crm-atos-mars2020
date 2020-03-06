@@ -9,12 +9,12 @@ const appRoutes: Routes = [
   {
     path: '',
     component: PagePrestationsComponent,
-    data: { title: 'Prestations', subtitle: 'Toutes les prestations' }
+    data: { title: 'Prestations', subTitle: 'Toutes les prestations' }
   },
   {
     path: 'add',
     component: AddPrestationComponent,
-    data: { title: 'Prestations', subtitle: 'Ajouter une prestation' }
+    data: { title: 'Prestations', subTitle: 'Ajouter une prestation' }
   },
 
 ];
