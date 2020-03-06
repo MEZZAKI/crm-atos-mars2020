@@ -1,4 +1,5 @@
-<app-tableau-light [properties]="propertiesPresta">
+<app-template-a>
+<app-tableau-dark [properties]="propertiesPresta">
     <tr *ngFor="let item of collection$ |async as collection$">
       <td>{{item.typePresta}}</td>
       <td>{{item.client}}</td>
@@ -12,4 +13,9 @@
         </select>
       </td>
     </tr>
-</app-tableau-light>
+</app-tableau-dark>
+
+<app-button [label]="label" [route]="route"></app-button>
+<app-button [label]="label" [externalink]="externalLink"></app-button>
+
+</app-template-a>

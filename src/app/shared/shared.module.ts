@@ -3,14 +3,24 @@ import { CommonModule } from '@angular/common';
 import { TotalPipe } from './pipes/total.pipe';
 import { StateDirective } from './directives/state.directive';
 import { TableauLightComponent } from './components/tableau-light/tableau-light.component';
-
+import { TableauDarkComponent } from './components/tableau-dark/tableau-dark.component';
+import { TemplateAComponent } from './templates/template-a/template-a.component';
+import { TemplateBComponent } from './templates/template-b/template-b.component';
+import { ButtonComponent } from './components/button/button.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [TotalPipe, StateDirective, TableauLightComponent],
-  exports:[TotalPipe, StateDirective, TableauLightComponent],
+
+declarations: [TotalPipe, StateDirective, TableauLightComponent, TableauDarkComponent, TemplateAComponent, TemplateBComponent, ButtonComponent,ButtonComponent],
+  exports:[TotalPipe, StateDirective, TableauLightComponent, TableauDarkComponent, TemplateAComponent, TemplateBComponent, ButtonComponent,ReactiveFormsModule],
   imports: [
-    CommonModule
+   CommonModule,
+   //TemplatesModule,
+   RouterModule,
+   ReactiveFormsModule
+
   ]
 })
 export class SharedModule { }

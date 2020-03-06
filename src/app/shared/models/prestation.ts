@@ -1,12 +1,13 @@
 import { PrestationI } from '../interfaces/prestation-i';
+import { State } from '../enums/state.enum';
 
 export class Prestation implements PrestationI {
   id: number;  typePresta: string;
   client: string;
-  tjmHt: number;
-  nbJours: number;
-  tva: number;
-  state: import("../enums/state.enum").State;
+  tjmHt = 1500;
+  nbJours = 1;
+  tva = 20;
+  state = State.OPTION;
   comment: string;
   constructor(obj?: Partial<Prestation>){
     if(obj){

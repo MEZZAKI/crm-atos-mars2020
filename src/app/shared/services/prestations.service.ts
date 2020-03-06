@@ -33,7 +33,9 @@ private pCollection$: Observable< Prestation[]>;
   }
 
   //add item in collection
-
+  public add(item: any) {
+    return this.http.post<Prestation>(` ${environment.urlApi}prestations`,item);
+  }
   // update item in collection
   updateState(item: Prestation, state: State) {
     let obj =new Prestation(item);
