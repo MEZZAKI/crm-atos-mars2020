@@ -11,6 +11,7 @@ import { State } from '../enums/state.enum';
 })
 export class PrestationsService {
 
+
 private pCollection$: Observable< Prestation[]>;
   constructor(private http: HttpClient) {
     this.collection= this.http.get< Prestation[]>(` ${environment.urlApi}prestations`).pipe(
@@ -46,6 +47,8 @@ private pCollection$: Observable< Prestation[]>;
     return this.http.patch(` ${environment.urlApi}prestations/${item.id}`,item);
   }
   //delete item in collection
-
+  public delete(item: Prestation) {
+    return this.http.delete(` ${environment.urlApi}prestations/${item.id}`);
+  }
   // get item by id from collection
 }

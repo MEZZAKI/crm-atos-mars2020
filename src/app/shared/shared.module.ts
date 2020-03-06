@@ -9,17 +9,19 @@ import { TemplateBComponent } from './templates/template-b/template-b.component'
 import { ButtonComponent } from './components/button/button.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
 
 declarations: [TotalPipe, StateDirective, TableauLightComponent, TableauDarkComponent, TemplateAComponent, TemplateBComponent, ButtonComponent,ButtonComponent],
-  exports:[TotalPipe, StateDirective, TableauLightComponent, TableauDarkComponent, TemplateAComponent, TemplateBComponent, ButtonComponent,ReactiveFormsModule],
+  exports:[TotalPipe, StateDirective, TableauLightComponent, TableauDarkComponent, TemplateAComponent, TemplateBComponent, ButtonComponent,ReactiveFormsModule,FontAwesomeModule],
   imports: [
    CommonModule,
    //TemplatesModule,
    RouterModule,
-   ReactiveFormsModule
+   ReactiveFormsModule,
+   FontAwesomeModule
 
   ]
 })

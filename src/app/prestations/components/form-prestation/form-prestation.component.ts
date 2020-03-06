@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-form-prestation',
   templateUrl: './form-prestation.component.html',
@@ -13,6 +13,7 @@ export class FormPrestationComponent implements OnInit {
   @Output() ntems :EventEmitter<Prestation>=new EventEmitter();
   @Input() item = new Prestation();
   public form: FormGroup;
+ 
   constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
@@ -31,5 +32,7 @@ export class FormPrestationComponent implements OnInit {
     console.log(this.form.value);
     this.ntems.emit(this.form.value);
   }
+
+
 
 }
